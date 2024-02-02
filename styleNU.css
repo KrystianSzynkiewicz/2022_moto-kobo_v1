@@ -1,0 +1,253 @@
+*{box-sizing: border-box;}
+
+/*STICYHEADER*/
+/* Style the header */
+.header {
+  padding: 0px 16px;
+  background: rgb(15, 15, 15);
+  color: #f1f1f1;
+  z-index: 1;
+}
+
+/* Page content - to jak wygląda sictyheader na stronie*/
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 94.5%;
+  }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+/*ANOTHER CSS*/
+
+body{
+    background-color: rgb(15, 15, 15);
+}
+
+.cointeriner{
+    background-color: rgb(15, 15, 15);
+    width: auto;
+    margin: auto;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    /*border: 5px solid rgb(85, 85, 85);*/
+    font-family:'Times New Roman', Times, serif;
+   
+}
+header{
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid rgb(242, 242, 242);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-section{
+    width: 1280px;
+    height: 98%;
+    margin: 0 auto;
+    /*to je to u góry - to daje tą stałość*/
+    /*border: 2px solid grey;*/
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+}
+.contact{
+    width: 50%;
+    height: 491px;
+    font-size: 120%;
+    text-align: center;
+    background-color: rgb(39, 39, 39);
+    color:#f1f1f1;
+    padding-top: 6%;
+}
+.font100{
+    font-weight: 100;
+    font-size: 20px;
+}
+.font101{
+    font-weight: 100;
+    font-size: 30px;
+}
+.img-last{
+    width: 125px;
+}
+.signature{
+    text-align: center;
+    color:#f1f1f1
+}
+
+/*SIDE BAR*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+
+
+
+/*RESPONSYWNOŚĆ*/
+@media screen and (max-width:1024px) {
+ 
+    .phone{
+        width: 100%;
+        /*background: red;*/
+    }
+    .contact-section{
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      
+    }
+    .contact{
+      width: 100%;
+    }
+    h2, h4{
+      font-size: smaller;
+    }
+
+}
+
+
+
+/*INTERACTIVE PHOTOS*/
+
+.containerNU {
+  position: relative;
+  width: 75%;
+  margin-left: 405px;
+
+  
+  height: 98%;
+  margin: 0 auto;
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0b232b;
+}
+
+.containerNU:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/*LINKS*/
+.link{
+  border: 2px solid rgb(121, 121, 121);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 26px;
+  transition: background-color 1s, color 1s;
+  cursor: pointer;
+
+}
+.link:hover{
+  color: rgb(0, 0, 0);
+  background-color: rgb(117, 117, 117);
+}
+.link:focus{
+  outline: none;
+  color: white;
+  background-color: rgb(29, 29, 29);
+}
